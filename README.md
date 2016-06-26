@@ -30,3 +30,16 @@ A comparison of loans can be performed as follows:
     avalanche_summary(ava)
     print('Total Payments\t\tInterest Paid')
     print(totals(ava))
+
+## Two Approaches
+The avalanche function can take two methods for selecting which loan to pay-off, keeping in mind that the loan will be paid off in its entirety before the algorithm chooses another loan. Examples as follows:
+
+**select_loan_rate**
+
+    ava = avalanche(loan_list_a,budget,select_loan_rate)
+    avalanche_summary(ava)
+
+**select_loan_pmt**
+
+    int_pmt = avalanche(loan_list_b,budget,select_loan_pmt)
+    avalanche_summary(int_pmt)
